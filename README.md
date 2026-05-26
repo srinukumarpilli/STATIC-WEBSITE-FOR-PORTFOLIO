@@ -36,3 +36,8 @@ Vanilla JavaScript (ES6+): Provides the logical architecture. It manages event l
 VS Code (Visual Studio Code): The primary integrated development environment (IDE) used to write, format, and organize the source code.
 
 Live Server Extension: A development tool inside VS Code used to spin up a local development server, allowing real-time browser preview updates instantly upon saving our code changes.
+
+
+#output
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/da9c4a93-80ba-491f-97ab-ab69d331eb2a" />

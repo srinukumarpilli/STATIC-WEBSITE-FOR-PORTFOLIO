@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science & Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- General background matrix grid -->
+    <div class="grid-bg"></div>
+
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">A Data Enthusiast</span></h1>
+            <p>Welcome to my professional space. I specialize in extracting insights from data, building smart models, and crafting clean web interfaces.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">Python & R</div>
+            <div class="skill-card">Data Analysis</div>
+            <div class="skill-card">Machine Learning</div>
+            <div class="skill-card">HTML, CSS, JS</div>
+            <div class="skill-card">SQL & Tableau</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Added data attributes to hold specific project details dynamically -->
+            <div class="project-card" data-id="1" data-title="Academic Analysis Model" data-desc="Calculated advanced correlation metrics and built analytical models to track student performance trends over consecutive semesters. Technologies used: Python, Pandas, Matplotlib.">
+                <h3>01 / Academic Analysis Model</h3>
+                <p>Calculated advanced correlation metrics and built analytical models to track student performance trends over consecutive semesters.</p>
+                <span class="open-link">Click to open view &rarr;</span>
+            </div>
+            
+            <div class="project-card" data-id="2" data-title="Tableau Integration Script" data-desc="Developed custom connection scripts linking external programming environments directly with Tableau for dynamic data visualization updates. Technologies used: Python, Tableau API, SQL.">
+                <h3>02 / Tableau Integration Script</h3>
+                <p>Developed custom connection scripts linking external programming environments directly with Tableau for dynamic data visualization updates.</p>
+                <span class="open-link">Click to open view &rarr;</span>
+            </div>
+            
+            <div class="project-card" data-id="3" data-title="Interactive Web Interface" data-desc="A fully responsive frontend portal designed to serve specific user interactions smoothly across desktop and mobile screen sizes. Technologies used: HTML5, CSS Grid, Vanilla JS.">
+                <h3>03 / Interactive Web Interface</h3>
+                <p>A fully responsive frontend portal designed to serve specific user interactions smoothly across desktop and mobile screen sizes.</p>
+                <span class="open-link">Click to open view &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- NEW: The Separate Page Layer Overlay with image background -->
+    <div class="separate-page-overlay" id="projectModal">
+        <div class="modal-nav">
+            <button class="close-btn" id="closeModal">&larr; Back to Portfolio</button>
+        </div>
+        <div class="modal-content-wrapper">
+            <h1 id="modalTitle">Project Title</h1>
+            <div class="divider"></div>
+            <p id="modalDesc">Detailed content description goes here...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Professional Portfolio. .</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

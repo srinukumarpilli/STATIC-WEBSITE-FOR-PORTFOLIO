@@ -1,0 +1,245 @@
+/* ==========================================================================
+   1. Reset & Core Typography
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body {
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.grid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #ffffff; 
+    margin: 12px auto 0 auto;
+}
+
+.highlight {
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    padding: 0.8rem 2rem;
+    border: 2px solid #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 900;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #888888;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 6px;
+}
+
+/* ==========================================================================
+   3. Main Portfolio Layout
+   ========================================================================== */
+section {
+    padding: 120px 10% 80px 10%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-section, .contact-section {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: #000000;
+    padding: 1.2rem 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.skill-card:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #000000;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease;
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.project-card p {
+    color: #888888;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.open-link {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.project-card:hover {
+    border-color: #ffffff;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   4. SEPARATE PAGE OVERLAY (The dynamic "separate page" view)
+   ========================================================================== */
+.separate-page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000000;
+    
+    /* UPDATED: Points to your local image file */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                  url('bg-pattern.jpg');
+                      
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    z-index: 2000; 
+    display: none;  
+    padding: 4rem 10%;
+    overflow-y: auto;
+}
